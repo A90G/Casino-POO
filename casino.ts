@@ -4,7 +4,7 @@ import { Persona } from "./persona";
 export class Casino {
     protected sucursal : number;
     protected ciudad: string;
-    protected aforo : Persona[] ;
+    protected aforo: Persona[];
     
 
     constructor(pSucursal:number,pCiudad:string,pAforo:Persona[]){
@@ -25,8 +25,15 @@ export class Casino {
      public setCiudad(pCiudad: string): string {
         return this.ciudad = pCiudad;
      }
-     public ValidacionAforo(personas:Persona[]){
+     public validacionAforo(personas:Persona[]){
+      let variable = false;
         for(let i=0;i < personas.length;i++){
-         return this.aforo = personas;
+        if(personas[i].mayorEdad() === true ){
+         //persona en i push al arreglo
+        } else {
+         //poder saber qué persona es menor y que el return solicite sacarla del casino
+         return "Aforo no validado";
+        }
      }
+}
 }
