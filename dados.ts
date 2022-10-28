@@ -1,9 +1,28 @@
-import { Juegos } from "./juegos";
-import { Jugador_Calificado } from "./jugador_calificado";
-import { Jugador } from "./jugador";
-import { Persona } from "./persona";
-
 export class Dados {
+    /*private puntos: number;
 
-    
+    constructor(pPuntos: number) {
+        this.puntos = pPuntos;
+    }*/
+
+    public operacionGanadora(apuesta: number): number {
+        let resultado: number = 0;
+        let dado1: number = Math.floor(Math.random() * 6) + 1;
+        let dado2: number = Math.floor(Math.random() * 6) + 1;
+        resultado = dado1 + dado2;
+
+        if (resultado == 7 || resultado == 11) {
+            console.log(`El resultado es ${resultado}. El usuario ha ganado su apuesta: $${apuesta * 2}`);
+            return apuesta * 2;
+        } else if (resultado == 2 || resultado == 12) {
+            console.log(`El resultado es ${resultado}. El usuario ha ganado dos veces su apuesta: $${apuesta * 3}`);
+            return apuesta * 3;
+        } else {
+            console.log(`El resultado es ${resultado}. El usuario ha perdido su apuesta: $${0}`);
+            return 0;
+        }
+    }
 }
+
+let dadosPrueba = new Dados();
+dadosPrueba.operacionGanadora(1000);
