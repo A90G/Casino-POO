@@ -11,6 +11,7 @@ var PuntoYBanca = /** @class */ (function () {
         this.apuestaMinima = pApuestaMinima;
         this.carta = pCarta;
     }*/
+    /* Se puede hacer la clase sin ningun parametro ni constructor?? */
     PuntoYBanca.prototype.operacionGanadora = function (apuesta, apuestaQuien) {
         var resultadoPunto = 0;
         var resultadoBanca = 0;

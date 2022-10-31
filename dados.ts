@@ -1,11 +1,6 @@
 export class Dados {
-    /*private puntos: number;
 
-    constructor(pPuntos: number) {
-        this.puntos = pPuntos;
-    }*/
-
-    public operacionGanadora(apuesta: number): number {
+    public jugarDados(apuesta: number): number {
         let resultado: number = 0;
         let dado1: number = Math.floor(Math.random() * 6) + 1;
         let dado2: number = Math.floor(Math.random() * 6) + 1;
@@ -24,5 +19,5 @@ export class Dados {
     }
 }
 
-let dadosPrueba = new Dados();
-dadosPrueba.operacionGanadora(1000);
+/* let dadosPrueba = new Dados();
+dadosPrueba.jugarDados(1000); */

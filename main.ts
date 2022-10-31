@@ -2,7 +2,7 @@ import { Casino } from "./casino";
 import { Dados } from "./dados";
 import { Jugador } from "./jugador";
 import { Persona } from "./persona";
-import { PuntoYBanca } from "./puntoBanca";
+import { PuntoBanca } from "./puntoBanca";
 import { Ruleta } from "./ruleta";
 import { Tragamonedas_Poderoso } from "./tragamonedas_poderoso";
 import { Tragamonedas } from "./tragamonedas";

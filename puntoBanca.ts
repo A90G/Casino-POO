@@ -1,13 +1,6 @@
 export class PuntoYBanca {
-    /* private apuestaMinima: number;
-    private carta: number;
 
-    constructor(pApuestaMinima: number, pCarta: number) {
-        this.apuestaMinima = pApuestaMinima;
-        this.carta = pCarta;
-    }*/
-
-    public operacionGanadora(apuesta: number, apuestaQuien: string): number {
+    public jugarPuntoyBanca(apuesta: number, apuestaQuien: string): number {
         let resultadoPunto: number = 0;
         let resultadoBanca: number = 0;
         let cartaPunto1: number = Math.floor(Math.random() * 9) + 1;
@@ -44,7 +37,7 @@ export class PuntoYBanca {
     }
 }
 
-let juego1 = new PuntoYBanca();
-juego1.operacionGanadora(500, 'punto');
-juego1.operacionGanadora(500, 'BaNcA');
-juego1.operacionGanadora(500, 'empAte');
+/* let juego1 = new PuntoYBanca();
+juego1.jugarPuntoyBanca(500, 'punto');
+juego1.jugarPuntoyBanca(500, 'BaNcA');
+juego1.jugarPuntoyBanca(500, 'empAte'); */

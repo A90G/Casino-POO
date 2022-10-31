@@ -9,7 +9,7 @@ var Dados = /** @class */ (function () {
     constructor(pPuntos: number) {
         this.puntos = pPuntos;
     }*/
-    Dados.prototype.operacionGanadora = function (apuesta) {
+    Dados.prototype.jugarDados = function (apuesta) {
         var resultado = 0;
         var dado1 = Math.floor(Math.random() * 6) + 1;
         var dado2 = Math.floor(Math.random() * 6) + 1;
@@ -31,4 +31,4 @@ var Dados = /** @class */ (function () {
 }());
 exports.Dados = Dados;
 var dadosPrueba = new Dados();
-dadosPrueba.operacionGanadora(1000);
+dadosPrueba.jugarDados(1000);
