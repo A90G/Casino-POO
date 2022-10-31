@@ -2,8 +2,7 @@ import { Casino } from "./casino";
 import { Dados } from "./dados";
 import { Jugador } from "./jugador";
 import { Persona } from "./persona";
-import { PuntoBanca } from "./puntoBanca";
-import { Ruleta } from "./ruleta";
+import { PuntoYBanca } from "./puntoBanca";
 import { Tragamonedas_Poderoso } from "./tragamonedas_poderoso";
 import { Tragamonedas } from "./tragamonedas";
 
@@ -20,6 +19,6 @@ let jugador010: Jugador = new Jugador("Luciana","Velez", 60, 50000);
 
 let arreglo_Jugadores: Persona[] =  [jugador001, jugador002, jugador003, jugador004, jugador005, jugador006, jugador007, jugador008, jugador009, jugador010];
 
-let casinoROYALE: Casino = new Casino (23, "Buenos Aires", arreglo_Jugadores);
+let casinoROYALE: Casino = new Casino (23, "Buenos Aires");
 
 
