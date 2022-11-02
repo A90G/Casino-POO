@@ -22,55 +22,44 @@ var Jugador = /** @class */ (function (_super) {
     function Jugador(pNombre, pApellido, pEdad, pDineroInicial) {
         var _this = _super.call(this, pNombre, pApellido, pEdad) || this;
         _this.dineroInicial = pDineroInicial;
+        _this.billetera = pDineroInicial;
         _this.apalancamiento = 1;
-        _this.dineroFinal = pDineroInicial;
         _this.categoria = "Jugador Comun";
         return _this;
     }
-    Jugador.prototype.getBilletera = function () {
+    Jugador.prototype.getDineroInicial = function () {
         return this.dineroInicial;
     };
-    Jugador.prototype.setBilletera = function (dinero) {
-        this.dineroInicial = dinero;
+    Jugador.prototype.setDineroInicial = function (dineroInicial) {
+        this.dineroInicial = dineroInicial;
     };
-    Jugador.prototype.getDineroFinal = function () {
-        return this.dineroFinal - (this.dineroInicial * this.apalancamiento - this.dineroInicial);
+    Jugador.prototype.getBilletera = function () {
+        return this.billetera;
+    };
+    Jugador.prototype.setBilletera = function (dinero) {
+        this.billetera = dinero;
     };
     Jugador.prototype.gananciaDelDia = function () {
-        var ganancia = this.dineroFinal - (this.dineroInicial * this.apalancamiento - this.dineroInicial) - this.dineroInicial;
+        var ganancia = (this.getBilletera() - this.dineroInicial);
+        console.log("El resultado del dia del jugador es: $".concat(ganancia));
         return ganancia;
-    };
-    Jugador.prototype.getApalancamiento = function () {
-        return this.apalancamiento;
     };
     Jugador.prototype.getCategoria = function () {
         return this.categoria;
     };
     Jugador.prototype.porcentajeOperGanadoras = function () {
-        var porcentaje = (this.dineroInicial * 100) / this.dineroFinal;
+        var porcentaje = (this.gananciaDelDia() * 100) / this.dineroInicial;
+        console.log("El jugador tiene un porcentaje de operaciones ganadores de ".concat(porcentaje, "%"));
         return porcentaje;
     };
-    Jugador.prototype.creditoInicial = function () {
-        var credito = this.dineroInicial * this.apalancamiento;
-        return credito;
-    };
     Jugador.prototype.cambioCategoria = function () {
-        if (this.dineroInicial >= 1000000 && this.porcentajeOperGanadoras() >= 45) {
+        if (this.dineroInicial >= 100000 && this.porcentajeOperGanadoras() >= 45) {
             this.categoria = "Jugador VIP";
         }
         else {
             this.categoria = "Jugador Comun";
         }
         console.log("El jugador tiene la siguiente nueva categor\u00EDa: ".concat(this.categoria));
-    };
-    Jugador.prototype.apalancamientoAprobado = function () {
-        if (this.categoria == "Jugador VIP") {
-            this.apalancamiento = 2;
-        }
-        else if (this.porcentajeOperGanadoras() >= 60 && this.apalancamiento == 2) {
-            this.apalancamiento = 3;
-        }
-        console.log("El jugador tiene el siguiente apalancamiento aprobado: ".concat(this.apalancamiento));
     };
     return Jugador;
 }(persona_1.Persona));

@@ -17,23 +17,6 @@ let jugador008: Jugador = new Jugador("Luis","Mendez", 65, 115000);
 let jugador009: Jugador = new Jugador("Lu","Chi", 74, 555000);
 let jugador010: Jugador = new Jugador("Luciana","Velez", 60, 50000);
 let arrayJugadores: Jugador[] = [jugador001, jugador002, jugador003, jugador004, jugador005, jugador006, jugador007, jugador008, jugador009, jugador010];
-/* jugador001.setNombre('Ramiro');
-console.log(jugador001.getNombre());
-jugador001.setApellido('Cofreces');
-console.log(jugador001.getApellido());
-jugador001.setEdad(32);
-console.log(jugador001.getEdad());
-console.log(jugador001.esMayorEdad());
-jugador001.setDineroInicial(75000);
-console.log(jugador001.getDineroInicial());
-console.log(jugador001.getDineroFinal()); // Revisar
-jugador001.apalancamientoAprobado();
-jugador001.cambioCategoria();
-console.log(jugador001.creditoInicial());
-console.log(jugador001.gananciaDelDia());
-console.log(jugador001.getApalancamiento());
-console.log(jugador001.getCategoria()); // Revisar
-console.log(jugador001.porcentajeOperGanadoras()); */
 
 let dados1: Dados = new Dados();
 // dados1.iniciarDados(1000);
@@ -55,16 +38,54 @@ console.log(casino1.getCiudad());
 casino1.validacionAforo(arrayJugadores);
 console.log(casino1.getAforo()); */
 
-/* casino1.jugarTragamonedas(jugador001, 1000);
-casino1.jugarTragamonedasPoderoso(jugador001, 1000); */
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
 casino1.jugarDados(jugador001, 1000);
-// casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
-
-console.log(jugador001.getBilletera());
-
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
 casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
 casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
 casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
 
-console.log(jugador001.getBilletera());
-
+/* jugador001.setNombre('Ramiro');
+console.log(jugador001.getNombre());
+jugador001.setApellido('Cofreces');
+console.log(jugador001.getApellido());
+jugador001.setEdad(32);
+console.log(jugador001.getEdad());
+console.log(jugador001.esMayorEdad()); */
+/* jugador001.setBilletera(75000);
+console.log(jugador001.getBilletera()); */
+//console.log(jugador001.getDineroInicial());
+//console.log(jugador001.gananciaDelDia());
+console.log(jugador001.porcentajeOperGanadoras());
+jugador001.cambioCategoria();
+console.log(jugador001.getCategoria());

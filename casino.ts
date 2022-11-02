@@ -55,26 +55,37 @@ export class Casino {
 
    public jugarTragamonedas(jugador: Jugador, apuesta: number): void {
       let resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-      jugador.setBilletera(resultado + jugador.getBilletera());
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
    }
 
    public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number): void {
       let resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-      jugador.setBilletera(resultado + jugador.getBilletera());
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
    }
 
    public jugarDados(jugador: Jugador, apuesta: number): void {
       let resultado = this.dados.iniciarDados(apuesta);
-      jugador.setBilletera(resultado + jugador.getBilletera());
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string): void {
       let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-      jugador.setBilletera(resultado + jugador.getBilletera());
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
    }
 }
-
-/* public cuentaCorriente(): void {
-   let creditoCuenta = this.dineroFinal - this.creditoInicial();
-   console.log(`El jugador ${this.nombre} tiene ${creditoCuenta} de credito en cuenta`);
-} */

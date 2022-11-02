@@ -37,24 +37,40 @@ var Casino = /** @class */ (function () {
     };
     Casino.prototype.jugarTragamonedas = function (jugador, apuesta) {
         var resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-        jugador.setBilletera(resultado + jugador.getBilletera());
+        if (jugador.getEdad() >= 18) {
+            jugador.setBilletera(resultado + jugador.getBilletera());
+        }
+        else {
+            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
+        }
     };
     Casino.prototype.jugarTragamonedasPoderoso = function (jugador, apuesta) {
         var resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-        jugador.setBilletera(resultado + jugador.getBilletera());
+        if (jugador.getEdad() >= 18) {
+            jugador.setBilletera(resultado + jugador.getBilletera());
+        }
+        else {
+            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
+        }
     };
     Casino.prototype.jugarDados = function (jugador, apuesta) {
         var resultado = this.dados.iniciarDados(apuesta);
-        return jugador.setBilletera(resultado + jugador.getBilletera());
+        if (jugador.getEdad() >= 18) {
+            jugador.setBilletera(resultado + jugador.getBilletera());
+        }
+        else {
+            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
+        }
     };
     Casino.prototype.jugarPuntoYBanca = function (jugador, apuesta, apuestaQuien) {
         var resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-        jugador.setBilletera(resultado + jugador.getBilletera());
+        if (jugador.getEdad() >= 18) {
+            jugador.setBilletera(resultado + jugador.getBilletera());
+        }
+        else {
+            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
+        }
     };
     return Casino;
 }());
 exports.Casino = Casino;
-/* public cuentaCorriente(): void {
-   let creditoCuenta = this.dineroFinal - this.creditoInicial();
-   console.log(`El jugador ${this.nombre} tiene ${creditoCuenta} de credito en cuenta`);
-} */ 
