@@ -45,10 +45,12 @@ export class Jugador extends Persona {
   public cambioCategoria(): void {
     if (this.dineroInicial >= 100000 && this.porcentajeOperGanadoras() >= 45) {
       this.categoria = "Jugador VIP";
+      this.setBilletera(this.dineroInicial * 0.2 + this.getBilletera());
+      console.log(`Felicitaciones! usted es un "Jugador VIP", le regalamos ${this.dineroInicial * 0.2}`)
     } else {
       this.categoria = "Jugador Comun";
     }
-    console.log(`El jugador tiene la siguiente nueva categoría: ${this.categoria}`);
+    console.log(`El jugador tiene la siguiente categoría: ${this.getCategoria()}`);
   }
   
   public getCategoria(): string {
