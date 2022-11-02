@@ -68,7 +68,7 @@ export class Casino {
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string) {
-      let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
+      return this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
    }
 }
 
