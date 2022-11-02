@@ -13,8 +13,8 @@ export class Dados {
             console.log(`El resultado es ${resultado}. El jugador ha ganado dos veces su apuesta: $${apuesta * 3}`);
             return apuesta * 3;
         } else {
-            console.log(`El resultado es ${resultado}. El jugador ha perdido su apuesta: $${0}`);
-            return 0;
+            console.log(`El resultado es ${resultado}. El jugador ha perdido su apuesta: $${-apuesta}`);
+            return -apuesta;
         }
     }
 }

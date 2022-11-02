@@ -29,8 +29,8 @@ export class TragamonedasPoderoso extends Tragamonedas {
       console.log(`La combinación es ${combinacion}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
       return apuesta * 2;
     } else if (apuesta >= this.apuestaMinima) {
-      console.log(`El resultado es ${combinacion}. El jugador ha perdido su apuesta: $${0}`);
-      return 0;
+      console.log(`El resultado es ${combinacion}. El jugador ha perdido su apuesta: $${-apuesta}`);
+      return -apuesta;
     } else {
       console.log(`Su apuesta es menor a la apuesta minima ($${this.apuestaMinima})`);
       return 0;

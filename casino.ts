@@ -62,11 +62,13 @@ export class Casino {
    }
 
    public jugarDados(jugador: Jugador, apuesta: number) {
-      return this.dados.iniciarDados(apuesta);
+      let resultado = this.dados.iniciarDados(apuesta);
+      jugador.billetera() + resultado
+      return resultado + jugador.billetera()
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string) {
-      return this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
+      let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
    }
 }
 

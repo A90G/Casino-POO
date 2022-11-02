@@ -36,8 +36,8 @@ var PuntoYBanca = /** @class */ (function () {
             return apuesta * 8;
         }
         else {
-            console.log("El resultado del Punto es ".concat(resultadoPunto, " y el resultado de la Banca es ").concat(resultadoBanca, ". El jugador ha perdido su apuesta: $").concat(0));
-            return 0;
+            console.log("El resultado del Punto es ".concat(resultadoPunto, " y el resultado de la Banca es ").concat(resultadoBanca, ". El jugador ha perdido su apuesta: $").concat(-apuesta));
+            return -apuesta;
         }
     };
     return PuntoYBanca;

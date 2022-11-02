@@ -18,8 +18,8 @@ var Dados = /** @class */ (function () {
             return apuesta * 3;
         }
         else {
-            console.log("El resultado es ".concat(resultado, ". El jugador ha perdido su apuesta: $").concat(0));
-            return 0;
+            console.log("El resultado es ".concat(resultado, ". El jugador ha perdido su apuesta: $").concat(-apuesta));
+            return -apuesta;
         }
     };
     return Dados;

@@ -28,8 +28,8 @@ var Tragamonedas = /** @class */ (function () {
             return apuesta * 2;
         }
         else if (apuesta >= this.apuestaMinima) {
-            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El jugador ha perdido su apuesta: $").concat(0));
-            return 0;
+            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El jugador ha perdido su apuesta: $").concat(-apuesta));
+            return -apuesta;
         }
         else {
             console.log("Su apuesta es menor a la apuesta minima ($".concat(this.apuestaMinima, ")"));

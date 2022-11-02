@@ -42,10 +42,12 @@ var Casino = /** @class */ (function () {
         return this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
     };
     Casino.prototype.jugarDados = function (jugador, apuesta) {
-        return this.dados.iniciarDados(apuesta);
+        var resultado = this.dados.iniciarDados(apuesta);
+        return resultado + jugador.billetera();
     };
     Casino.prototype.jugarPuntoYBanca = function (jugador, apuesta, apuestaQuien) {
-        return this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
+        var resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
+        return resultado + jugador.billetera();
     };
     return Casino;
 }());

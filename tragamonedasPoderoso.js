@@ -44,8 +44,8 @@ var TragamonedasPoderoso = /** @class */ (function (_super) {
             return apuesta * 2;
         }
         else if (apuesta >= this.apuestaMinima) {
-            console.log("El resultado es ".concat(combinacion, ". El jugador ha perdido su apuesta: $").concat(0));
-            return 0;
+            console.log("El resultado es ".concat(combinacion, ". El jugador ha perdido su apuesta: $").concat(-apuesta));
+            return -apuesta;
         }
         else {
             console.log("Su apuesta es menor a la apuesta minima ($".concat(this.apuestaMinima, ")"));

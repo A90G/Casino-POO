@@ -31,8 +31,8 @@ export class PuntoYBanca {
             console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha ganado su apuesta: $${apuesta * 8}`);
             return apuesta * 8;
         } else {
-            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha perdido su apuesta: $${0}`);
-            return 0;
+            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha perdido su apuesta: $${-apuesta}`);
+            return -apuesta;
         }
     }
 }

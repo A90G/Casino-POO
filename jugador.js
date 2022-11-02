@@ -72,6 +72,10 @@ var Jugador = /** @class */ (function (_super) {
         }
         console.log("El jugador tiene el siguiente apalancamiento aprobado: ".concat(this.apalancamiento));
     };
+    Jugador.prototype.billetera = function () {
+        var resultado = this.dineroInicial;
+        return resultado;
+    };
     return Jugador;
 }(persona_1.Persona));
 exports.Jugador = Jugador;

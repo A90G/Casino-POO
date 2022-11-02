@@ -17,7 +17,7 @@ let jugador008: Jugador = new Jugador("Luis","Mendez", 65, 115000);
 let jugador009: Jugador = new Jugador("Lu","Chi", 74, 555000);
 let jugador010: Jugador = new Jugador("Luciana","Velez", 60, 50000);
 let arrayJugadores: Jugador[] = [jugador001, jugador002, jugador003, jugador004, jugador005, jugador006, jugador007, jugador008, jugador009, jugador010];
-jugador001.setNombre('Ramiro');
+/* jugador001.setNombre('Ramiro');
 console.log(jugador001.getNombre());
 jugador001.setApellido('Cofreces');
 console.log(jugador001.getApellido());
@@ -33,32 +33,32 @@ console.log(jugador001.creditoInicial());
 console.log(jugador001.gananciaDelDia());
 console.log(jugador001.getApalancamiento());
 console.log(jugador001.getCategoria()); // Revisar
-console.log(jugador001.porcentajeOperGanadoras());
+console.log(jugador001.porcentajeOperGanadoras()); */
 
 let dados1: Dados = new Dados();
-dados1.iniciarDados(1000);
+// dados1.iniciarDados(1000);
 
 let puntoYBanca1: PuntoYBanca = new PuntoYBanca();
-puntoYBanca1.iniciarPuntoyBanca(1000, "punto");
+// puntoYBanca1.iniciarPuntoyBanca(1000, "punto");
 
 let tragamonedas1: Tragamonedas = new Tragamonedas("animales", 10);
-tragamonedas1.iniciarTragamonedas(1000);
+// tragamonedas1.iniciarTragamonedas(1000);
 
 let tragamonedasPoderoso1: TragamonedasPoderoso = new TragamonedasPoderoso("animales", 50, true);
-tragamonedasPoderoso1.iniciarTragamonedasPoderoso(1000);
+// tragamonedasPoderoso1.iniciarTragamonedasPoderoso(1000);
 
 let casino1: Casino = new Casino (23, "Buenos Aires", tragamonedas1, tragamonedasPoderoso1, dados1, puntoYBanca1);
-casino1.setSucursal(99);
+/* casino1.setSucursal(99);
 console.log(casino1.getSucursal());
 casino1.setCiudad('Ushuaia');
 console.log(casino1.getCiudad());
 casino1.validacionAforo(arrayJugadores);
-console.log(casino1.getAforo());
+console.log(casino1.getAforo()); */
 
-casino1.jugarTragamonedas(jugador001, 1000);
-casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+/* casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000); */
 casino1.jugarDados(jugador001, 1000);
-casino1.jugarPuntoYBanca(jugador004, 1000, "empate");
+// casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
 
-
+console.log(jugador001.billetera());
 

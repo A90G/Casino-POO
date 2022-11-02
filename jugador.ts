@@ -66,4 +66,9 @@ export class Jugador extends Persona {
     }
     console.log(`El jugador tiene el siguiente apalancamiento aprobado: ${this.apalancamiento}`);
   }
+
+  public billetera(): number {
+    let resultado = this.dineroInicial;
+    return resultado;
+  }
 }
