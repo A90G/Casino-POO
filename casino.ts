@@ -55,22 +55,22 @@ export class Casino {
 
    public jugarTragamonedas(jugador: Jugador, apuesta: number) {
       let resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-      console.log(jugador.billetera() + resultado)
+      console.log(jugador.billetera() + resultado);
    }
 
    public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number) {
       let resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-      console.log(jugador.billetera() + resultado)
+      console.log(jugador.billetera() + resultado);
    }
 
    public jugarDados(jugador: Jugador, apuesta: number) {
       let resultado = this.dados.iniciarDados(apuesta);
-      console.log(jugador.billetera() + resultado)
+      console.log(jugador.billetera() + resultado);
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string) {
       let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-      console.log(jugador.billetera() + resultado)
+      console.log(jugador.billetera() + resultado);
    }
 }
 
