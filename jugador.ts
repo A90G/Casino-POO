@@ -64,6 +64,6 @@ export class Jugador extends Persona {
     } else if (this.porcentajeOperGanadoras() >= 60 && this.apalancamiento == 2) {
       this.apalancamiento = 3;
     }
-    console.log(`El jugador tiene el siguiente apalancamiento aprobado: ${this.categoria}`);
+    console.log(`El jugador tiene el siguiente apalancamiento aprobado: ${this.apalancamiento}`);
   }
 }

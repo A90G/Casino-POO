@@ -55,5 +55,5 @@ var TragamonedasPoderoso = /** @class */ (function (_super) {
     return TragamonedasPoderoso;
 }(tragamonedas_1.Tragamonedas));
 exports.TragamonedasPoderoso = TragamonedasPoderoso;
-var tragamonedasPod1 = new TragamonedasPoderoso('animales', 10, true);
-tragamonedasPod1.jugarTragamonedasPoderoso(1000);
+/* let tragamonedasPod1 = new TragamonedasPoderoso('animales', 10, true);
+tragamonedasPod1.jugarTragamonedasPoderoso(1000); */

@@ -70,7 +70,7 @@ var Jugador = /** @class */ (function (_super) {
         else if (this.porcentajeOperGanadoras() >= 60 && this.apalancamiento == 2) {
             this.apalancamiento = 3;
         }
-        console.log("El jugador tiene el siguiente apalancamiento aprobado: ".concat(this.categoria));
+        console.log("El jugador tiene el siguiente apalancamiento aprobado: ".concat(this.apalancamiento));
     };
     return Jugador;
 }(persona_1.Persona));

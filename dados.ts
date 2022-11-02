@@ -18,6 +18,3 @@ export class Dados {
         }
     }
 }
-
-/* let dadosPrueba = new Dados();
-dadosPrueba.jugarDados(1000); */

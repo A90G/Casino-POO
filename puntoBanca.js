@@ -4,15 +4,7 @@ exports.PuntoYBanca = void 0;
 var PuntoYBanca = /** @class */ (function () {
     function PuntoYBanca() {
     }
-    /* private apuestaMinima: number;
-    private carta: number;
-
-    constructor(pApuestaMinima: number, pCarta: number) {
-        this.apuestaMinima = pApuestaMinima;
-        this.carta = pCarta;
-    }*/
-    /* Se puede hacer la clase sin ningun parametro ni constructor?? */
-    PuntoYBanca.prototype.operacionGanadora = function (apuesta, apuestaQuien) {
+    PuntoYBanca.prototype.jugarPuntoyBanca = function (apuesta, apuestaQuien) {
         var resultadoPunto = 0;
         var resultadoBanca = 0;
         var cartaPunto1 = Math.floor(Math.random() * 9) + 1;
@@ -51,7 +43,7 @@ var PuntoYBanca = /** @class */ (function () {
     return PuntoYBanca;
 }());
 exports.PuntoYBanca = PuntoYBanca;
-var juego1 = new PuntoYBanca();
-juego1.operacionGanadora(500, 'punto');
-juego1.operacionGanadora(500, 'BaNcA');
-juego1.operacionGanadora(500, 'empAte');
+/* let juego1 = new PuntoYBanca();
+juego1.jugarPuntoyBanca(500, 'punto');
+juego1.jugarPuntoyBanca(500, 'BaNcA');
+juego1.jugarPuntoyBanca(500, 'empAte'); */ 
