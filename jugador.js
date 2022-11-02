@@ -27,11 +27,11 @@ var Jugador = /** @class */ (function (_super) {
         _this.categoria = "Jugador Comun";
         return _this;
     }
-    Jugador.prototype.getDineroInicial = function () {
+    Jugador.prototype.getBilletera = function () {
         return this.dineroInicial;
     };
-    Jugador.prototype.setDineroInicial = function (pDineroInicial) {
-        return this.dineroInicial = pDineroInicial;
+    Jugador.prototype.setBilletera = function (dinero) {
+        this.dineroInicial = dinero;
     };
     Jugador.prototype.getDineroFinal = function () {
         return this.dineroFinal - (this.dineroInicial * this.apalancamiento - this.dineroInicial);
@@ -71,10 +71,6 @@ var Jugador = /** @class */ (function (_super) {
             this.apalancamiento = 3;
         }
         console.log("El jugador tiene el siguiente apalancamiento aprobado: ".concat(this.apalancamiento));
-    };
-    Jugador.prototype.billetera = function () {
-        var resultado = this.dineroInicial;
-        return resultado;
     };
     return Jugador;
 }(persona_1.Persona));

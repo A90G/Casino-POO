@@ -37,19 +37,19 @@ var Casino = /** @class */ (function () {
     };
     Casino.prototype.jugarTragamonedas = function (jugador, apuesta) {
         var resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-        console.log(jugador.billetera() + resultado);
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
     Casino.prototype.jugarTragamonedasPoderoso = function (jugador, apuesta) {
         var resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-        console.log(jugador.billetera() + resultado);
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
     Casino.prototype.jugarDados = function (jugador, apuesta) {
         var resultado = this.dados.iniciarDados(apuesta);
-        console.log(jugador.billetera() + resultado);
+        return jugador.setBilletera(resultado + jugador.getBilletera());
     };
     Casino.prototype.jugarPuntoYBanca = function (jugador, apuesta, apuestaQuien) {
         var resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-        console.log(jugador.billetera() + resultado);
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
     return Casino;
 }());

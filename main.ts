@@ -55,10 +55,16 @@ console.log(casino1.getCiudad());
 casino1.validacionAforo(arrayJugadores);
 console.log(casino1.getAforo()); */
 
-casino1.jugarTragamonedas(jugador001, 1000);
-casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+/* casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000); */
 casino1.jugarDados(jugador001, 1000);
-casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
+// casino1.jugarPuntoYBanca(jugador001, 1000, "empate");
 
-// console.log(jugador001.billetera());
+console.log(jugador001.getBilletera());
+
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+
+console.log(jugador001.getBilletera());
 

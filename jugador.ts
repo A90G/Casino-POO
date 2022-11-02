@@ -1,10 +1,10 @@
 import { Persona } from "./persona";
 
 export class Jugador extends Persona {
-  private dineroInicial: number;
-  private dineroFinal: number;
-  private apalancamiento: number;
-  private categoria: string;
+  protected dineroInicial: number;
+  protected dineroFinal: number;
+  protected apalancamiento: number;
+  protected categoria: string;
 
   constructor (pNombre: string, pApellido: string, pEdad: number, pDineroInicial: number) {
     super (pNombre, pApellido, pEdad);
@@ -14,12 +14,12 @@ export class Jugador extends Persona {
     this.categoria = "Jugador Comun";
   }
 
-  public getDineroInicial(): number { 
+  public getBilletera(): number {
     return this.dineroInicial;
   }
-  
-  public setDineroInicial(pDineroInicial: number): number { 
-    return this.dineroInicial = pDineroInicial;
+
+  public setBilletera(dinero: number) {
+    this.dineroInicial = dinero;
   }
   
   public getDineroFinal(): number {
@@ -65,10 +65,5 @@ export class Jugador extends Persona {
       this.apalancamiento = 3;
     }
     console.log(`El jugador tiene el siguiente apalancamiento aprobado: ${this.apalancamiento}`);
-  }
-
-  public billetera(): number {
-    let resultado = this.dineroInicial;
-    return resultado;
   }
 }
