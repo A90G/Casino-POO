@@ -54,21 +54,23 @@ export class Casino {
    }
 
    public jugarTragamonedas(jugador: Jugador, apuesta: number) {
-      return this.tragamonedas.iniciarTragamonedas(apuesta);
+      let resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
+      console.log(jugador.billetera() + resultado)
    }
 
    public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number) {
-      return this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
+      let resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
+      console.log(jugador.billetera() + resultado)
    }
 
    public jugarDados(jugador: Jugador, apuesta: number) {
       let resultado = this.dados.iniciarDados(apuesta);
-      jugador.billetera() + resultado
-      return resultado + jugador.billetera()
+      console.log(jugador.billetera() + resultado)
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string) {
-      return this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
+      let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
+      console.log(jugador.billetera() + resultado)
    }
 }
 
