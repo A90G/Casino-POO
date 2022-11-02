@@ -2,10 +2,14 @@
 exports.__esModule = true;
 exports.Casino = void 0;
 var Casino = /** @class */ (function () {
-    function Casino(pSucursal, pCiudad) {
+    function Casino(pSucursal, pCiudad, ptragamonedas, ptragamonedasPod, pDados, pPuntoBanca) {
         this.sucursal = pSucursal;
         this.ciudad = pCiudad;
         this.aforo = [];
+        this.tragamonedas = ptragamonedas;
+        this.tragamonedasPoderoso = ptragamonedasPod;
+        this.dados = pDados;
+        this.puntoBanca = pPuntoBanca;
     }
     Casino.prototype.getSucursal = function () {
         return this.sucursal;
@@ -30,6 +34,18 @@ var Casino = /** @class */ (function () {
             }
         }
         return this.aforo;
+    };
+    Casino.prototype.jugarTragamonedas = function (jugador, apuesta) {
+        return this.tragamonedas.iniciarTragamonedas(apuesta);
+    };
+    Casino.prototype.jugarTragamonedasPoderoso = function (jugador, apuesta) {
+        return this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
+    };
+    Casino.prototype.jugarDados = function (jugador, apuesta) {
+        return this.dados.iniciarDados(apuesta);
+    };
+    Casino.prototype.jugarPuntoYBanca = function (jugador, apuesta, apuestaQuien) {
+        return this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
     };
     return Casino;
 }());

@@ -1,20 +1,12 @@
 import { Casino } from "./casino";
 import { Dados } from "./dados";
 import { Jugador } from "./jugador";
-import { Persona } from "./persona";
 import { PuntoYBanca } from "./puntoBanca";
 import { Tragamonedas } from "./tragamonedas";
 import { TragamonedasPoderoso } from "./tragamonedasPoderoso";
+// import { Persona } from "./persona";
 
-/* let casino1: Casino = new Casino (23, "Buenos Aires");
-casino1.setSucursal(99);
-console.log(casino1.getSucursal());
-casino1.setCiudad('Ushuaia');
-console.log(casino1.getCiudad());
-casino1.validacionAforo(arrayJugadores);
-console.log(casino1.getAforo()); */
-
-/* let jugador001: Jugador = new Jugador("Pedro","Alvarez", 34, 25000);
+let jugador001: Jugador = new Jugador("Pedro","Alvarez", 34, 25000);
 let jugador002: Jugador = new Jugador("Pablo","Gómes", 28, 250000);
 let jugador003: Jugador = new Jugador("Ariel","Durán", 18, 15000);
 let jugador004: Jugador = new Jugador("Romina","Perez", 16, 2500);
@@ -41,7 +33,32 @@ console.log(jugador001.creditoInicial());
 console.log(jugador001.gananciaDelDia());
 console.log(jugador001.getApalancamiento());
 console.log(jugador001.getCategoria()); // Revisar
-console.log(jugador001.porcentajeOperGanadoras()); */
+console.log(jugador001.porcentajeOperGanadoras());
 
-/* let dados1: Dados = new Dados();
-dados1.jugarDados(1000); */
+let dados1: Dados = new Dados();
+dados1.iniciarDados(1000);
+
+let puntoYBanca1: PuntoYBanca = new PuntoYBanca();
+puntoYBanca1.iniciarPuntoyBanca(1000, "punto");
+
+let tragamonedas1: Tragamonedas = new Tragamonedas("animales", 10);
+tragamonedas1.iniciarTragamonedas(1000);
+
+let tragamonedasPoderoso1: TragamonedasPoderoso = new TragamonedasPoderoso("animales", 50, true);
+tragamonedasPoderoso1.iniciarTragamonedasPoderoso(1000);
+
+let casino1: Casino = new Casino (23, "Buenos Aires", tragamonedas1, tragamonedasPoderoso1, dados1, puntoYBanca1);
+casino1.setSucursal(99);
+console.log(casino1.getSucursal());
+casino1.setCiudad('Ushuaia');
+console.log(casino1.getCiudad());
+casino1.validacionAforo(arrayJugadores);
+console.log(casino1.getAforo());
+
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador004, 1000, "empate");
+
+
+

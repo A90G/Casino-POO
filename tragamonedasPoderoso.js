@@ -30,21 +30,21 @@ var TragamonedasPoderoso = /** @class */ (function (_super) {
     TragamonedasPoderoso.prototype.setDiaDeSuerte = function (pDiaDeSuerte) {
         this.diaDeSuerte = pDiaDeSuerte;
     };
-    TragamonedasPoderoso.prototype.jugarTragamonedasPoderoso = function (apuesta) {
+    TragamonedasPoderoso.prototype.iniciarTragamonedasPoderoso = function (apuesta) {
         var lugar1 = Math.floor(Math.random() * 2) + 1;
         var lugar2 = Math.floor(Math.random() * 2) + 1;
         var lugar3 = Math.floor(Math.random() * 2) + 1;
         var combinacion = "".concat(lugar1, " ").concat(lugar2, " ").concat(lugar3);
         if ((lugar1 === lugar2 && lugar2 === lugar3) && (apuesta >= this.apuestaMinima) && (this.diaDeSuerte === true)) {
-            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El usuario ha ganado su apuesta: $").concat(apuesta * 5));
+            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El jugador ha ganado su apuesta: $").concat(apuesta * 5));
             return apuesta * 5;
         }
         else if ((lugar1 === lugar2 && lugar2 === lugar3) && (apuesta >= this.apuestaMinima)) {
-            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El usuario ha ganado su apuesta: $").concat(apuesta * 2));
+            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El jugador ha ganado su apuesta: $").concat(apuesta * 2));
             return apuesta * 2;
         }
         else if (apuesta >= this.apuestaMinima) {
-            console.log("El resultado es ".concat(combinacion, ". El usuario ha perdido su apuesta: $").concat(0));
+            console.log("El resultado es ".concat(combinacion, ". El jugador ha perdido su apuesta: $").concat(0));
             return 0;
         }
         else {
@@ -55,5 +55,3 @@ var TragamonedasPoderoso = /** @class */ (function (_super) {
     return TragamonedasPoderoso;
 }(tragamonedas_1.Tragamonedas));
 exports.TragamonedasPoderoso = TragamonedasPoderoso;
-/* let tragamonedasPod1 = new TragamonedasPoderoso('animales', 10, true);
-tragamonedasPod1.jugarTragamonedasPoderoso(1000); */

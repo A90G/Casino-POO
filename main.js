@@ -1,14 +1,12 @@
 "use strict";
 exports.__esModule = true;
+var casino_1 = require("./casino");
 var dados_1 = require("./dados");
 var jugador_1 = require("./jugador");
-/* let casino1: Casino = new Casino (23, "Buenos Aires");
-casino1.setSucursal(99);
-console.log(casino1.getSucursal());
-casino1.setCiudad('Ushuaia');
-console.log(casino1.getCiudad());
-casino1.validacionAforo(arrayJugadores);
-console.log(casino1.getAforo()); */
+var puntoBanca_1 = require("./puntoBanca");
+var tragamonedas_1 = require("./tragamonedas");
+var tragamonedasPoderoso_1 = require("./tragamonedasPoderoso");
+// import { Persona } from "./persona";
 var jugador001 = new jugador_1.Jugador("Pedro", "Alvarez", 34, 25000);
 var jugador002 = new jugador_1.Jugador("Pablo", "Gómes", 28, 250000);
 var jugador003 = new jugador_1.Jugador("Ariel", "Durán", 18, 15000);
@@ -29,13 +27,30 @@ console.log(jugador001.getEdad());
 console.log(jugador001.esMayorEdad());
 jugador001.setDineroInicial(75000);
 console.log(jugador001.getDineroInicial());
-console.log(jugador001.getDineroFinal()); /* Revisar */
+console.log(jugador001.getDineroFinal()); // Revisar
 jugador001.apalancamientoAprobado();
 jugador001.cambioCategoria();
 console.log(jugador001.creditoInicial());
 console.log(jugador001.gananciaDelDia());
 console.log(jugador001.getApalancamiento());
-console.log(jugador001.getCategoria());
+console.log(jugador001.getCategoria()); // Revisar
 console.log(jugador001.porcentajeOperGanadoras());
 var dados1 = new dados_1.Dados();
-dados1.jugarDados(1000);
+dados1.iniciarDados(1000);
+var puntoYBanca1 = new puntoBanca_1.PuntoYBanca();
+puntoYBanca1.iniciarPuntoyBanca(1000, "punto");
+var tragamonedas1 = new tragamonedas_1.Tragamonedas("animales", 10);
+tragamonedas1.iniciarTragamonedas(1000);
+var tragamonedasPoderoso1 = new tragamonedasPoderoso_1.TragamonedasPoderoso("animales", 50, true);
+tragamonedasPoderoso1.iniciarTragamonedasPoderoso(1000);
+var casino1 = new casino_1.Casino(23, "Buenos Aires", tragamonedas1, tragamonedasPoderoso1, dados1, puntoYBanca1);
+casino1.setSucursal(99);
+console.log(casino1.getSucursal());
+casino1.setCiudad('Ushuaia');
+console.log(casino1.getCiudad());
+casino1.validacionAforo(arrayJugadores);
+console.log(casino1.getAforo());
+casino1.jugarTragamonedas(jugador001, 1000);
+casino1.jugarTragamonedasPoderoso(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
+casino1.jugarPuntoYBanca(jugador001, 1000, "empate");

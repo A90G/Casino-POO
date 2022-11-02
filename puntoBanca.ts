@@ -1,6 +1,6 @@
 export class PuntoYBanca {
 
-    public jugarPuntoyBanca(apuesta: number, apuestaQuien: string): number {
+    public iniciarPuntoyBanca(apuesta: number, apuestaQuien: string): number {
         let resultadoPunto: number = 0;
         let resultadoBanca: number = 0;
         let cartaPunto1: number = Math.floor(Math.random() * 9) + 1;
@@ -19,25 +19,20 @@ export class PuntoYBanca {
         }
 
         if (resultadoPunto == 8 || resultadoPunto == 9) {
-            console.log(`El resultado es ${resultadoPunto}. El usuario ha ganado su apuesta: $${apuesta * 2}`);
+            console.log(`El resultado es ${resultadoPunto}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
             return apuesta * 2;
         } else if (apuestaQuien.toLowerCase() == "punto" && resultadoPunto > resultadoBanca) {
-            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El usuario ha ganado su apuesta: $${apuesta * 2}`);
+            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
             return apuesta * 2;
         } else if (apuestaQuien.toLowerCase() == "banca" && resultadoBanca > resultadoPunto) {
-            console.log(`El resultado de la Banca es ${resultadoBanca} y el resultado del Punto es ${resultadoPunto}. El usuario ha ganado su apuesta: $${apuesta * 2}`);
+            console.log(`El resultado de la Banca es ${resultadoBanca} y el resultado del Punto es ${resultadoPunto}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
             return apuesta * 2; 
         } else if (apuestaQuien.toLowerCase() == "empate" && resultadoPunto == resultadoBanca) {
-            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El usuario ha ganado su apuesta: $${apuesta * 8}`);
+            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha ganado su apuesta: $${apuesta * 8}`);
             return apuesta * 8;
         } else {
-            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El usuario ha perdido su apuesta: $${0}`);
+            console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha perdido su apuesta: $${0}`);
             return 0;
         }
     }
 }
-
-/* let juego1 = new PuntoYBanca();
-juego1.jugarPuntoyBanca(500, 'punto');
-juego1.jugarPuntoyBanca(500, 'BaNcA');
-juego1.jugarPuntoyBanca(500, 'empAte'); */

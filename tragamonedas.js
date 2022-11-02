@@ -18,17 +18,17 @@ var Tragamonedas = /** @class */ (function () {
     Tragamonedas.prototype.setApuestaMinima = function (pApuestaMinima) {
         this.apuestaMinima = pApuestaMinima;
     };
-    Tragamonedas.prototype.jugarTragamonedas = function (apuesta) {
+    Tragamonedas.prototype.iniciarTragamonedas = function (apuesta) {
         var lugar1 = Math.floor(Math.random() * 2) + 1;
         var lugar2 = Math.floor(Math.random() * 2) + 1;
         var lugar3 = Math.floor(Math.random() * 2) + 1;
         var combinacion = "".concat(lugar1, " ").concat(lugar2, " ").concat(lugar3);
         if ((lugar1 === lugar2 && lugar2 === lugar3) && (apuesta >= this.apuestaMinima)) {
-            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El usuario ha ganado su apuesta: $").concat(apuesta * 2));
+            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El jugador ha ganado su apuesta: $").concat(apuesta * 2));
             return apuesta * 2;
         }
         else if (apuesta >= this.apuestaMinima) {
-            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El usuario ha perdido su apuesta: $").concat(0));
+            console.log("La combinaci\u00F3n es ".concat(combinacion, ". El jugador ha perdido su apuesta: $").concat(0));
             return 0;
         }
         else {
@@ -39,5 +39,3 @@ var Tragamonedas = /** @class */ (function () {
     return Tragamonedas;
 }());
 exports.Tragamonedas = Tragamonedas;
-/* let tragamonedas1 = new Tragamonedas('animales', 10);
-tragamonedas1.jugarTragamonedas(345); */ 

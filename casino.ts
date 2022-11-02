@@ -1,14 +1,26 @@
 import { Jugador } from "./jugador";
+import { Tragamonedas } from "./tragamonedas";
+import { TragamonedasPoderoso } from "./tragamonedasPoderoso";
+import { Dados } from "./dados";
+import { PuntoYBanca } from "./puntoBanca";
 
 export class Casino {
    protected sucursal: number;
    protected ciudad: string;
    protected aforo: Jugador[];
+   protected tragamonedas: Tragamonedas;
+   protected tragamonedasPoderoso: TragamonedasPoderoso;
+   protected dados: Dados;
+   protected puntoBanca: PuntoYBanca;
 
-   constructor (pSucursal: number, pCiudad: string) {
+   constructor (pSucursal: number, pCiudad: string, ptragamonedas: Tragamonedas, ptragamonedasPod: TragamonedasPoderoso, pDados: Dados, pPuntoBanca: PuntoYBanca) {
       this.sucursal = pSucursal;
       this.ciudad = pCiudad;
       this.aforo = [];
+      this.tragamonedas = ptragamonedas;
+      this.tragamonedasPoderoso = ptragamonedasPod;
+      this.dados = pDados;
+      this.puntoBanca = pPuntoBanca;
    }
    
    public getSucursal(): number {
@@ -39,6 +51,22 @@ export class Casino {
          }
       }
       return this.aforo;
+   }
+
+   public jugarTragamonedas(jugador: Jugador, apuesta: number) {
+      return this.tragamonedas.iniciarTragamonedas(apuesta);
+   }
+
+   public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number) {
+      return this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
+   }
+
+   public jugarDados(jugador: Jugador, apuesta: number) {
+      return this.dados.iniciarDados(apuesta);
+   }
+
+   public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string) {
+      return this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
    }
 }
 
