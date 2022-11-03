@@ -37,13 +37,13 @@ export class Jugador extends Persona {
   }
   
   public porcentajeOperGanadoras(): number {
-    let porcentaje = (this.gananciaDelDia() * 100) / this.dineroInicial;
+    let porcentaje = (this.gananciaDelDia() / this.dineroInicial) * 100;
     console.log(`El jugador tiene un porcentaje de operaciones ganadores de ${porcentaje}%`);
     return porcentaje;
   }
   
   public cambioCategoria(): void {
-    if (this.dineroInicial >= 100000 && this.porcentajeOperGanadoras() >= 45) {
+    if (this.dineroInicial >= 100000 && this.porcentajeOperGanadoras() >= 60) {
       this.categoria = "Jugador VIP";
       this.setBilletera(this.dineroInicial * 0.2 + this.getBilletera());
       console.log(`Felicitaciones! usted es un "Jugador VIP", le regalamos ${this.dineroInicial * 0.2}`)
