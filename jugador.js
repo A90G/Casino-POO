@@ -50,7 +50,7 @@ var Jugador = /** @class */ (function (_super) {
         return porcentaje;
     };
     Jugador.prototype.cambioCategoria = function () {
-        if (this.dineroInicial >= 100000 && this.porcentajeOperGanadoras() >= 45) {
+        if (this.dineroInicial >= 100000 && this.porcentajeOperGanadoras() >= 60) {
             this.categoria = "Jugador VIP";
             this.setBilletera(this.dineroInicial * 0.2 + this.getBilletera());
             console.log("Felicitaciones! usted es un \"Jugador VIP\", le regalamos ".concat(this.dineroInicial * 0.2));

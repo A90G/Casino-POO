@@ -15,7 +15,7 @@ let jugador006: Jugador = new Jugador("María","Fernandez", 54, 75000);
 let jugador007: Jugador = new Jugador("James","Bond", 40, 2500000);
 let jugador008: Jugador = new Jugador("Luis","Mendez", 12, 1150);
 let jugador009: Jugador = new Jugador("Lu","Chi", 74, 555000);
-let jugador010: Jugador = new Jugador("Luciana","Velez", 60, 50000);
+let jugador010: Jugador = new Jugador("Luciana","Velez", 60, 500000);
 
 let arrayJugadores: Jugador[] = [jugador001, jugador002, jugador003, jugador004, jugador005, jugador006, jugador007, jugador008, jugador009, jugador010];
 
