@@ -4,6 +4,8 @@ import { TragamonedasPoderoso } from "./tragamonedasPoderoso";
 import { Dados } from "./dados";
 import { PuntoYBanca } from "./puntoBanca";
 
+import * as fs from 'fs'
+
 export class Casino {
    protected sucursal: number;
    protected ciudad: string;
@@ -13,7 +15,7 @@ export class Casino {
    protected dados: Dados;
    protected puntoBanca: PuntoYBanca;
 
-   constructor (pSucursal: number, pCiudad: string, ptragamonedas: Tragamonedas, ptragamonedasPod: TragamonedasPoderoso, pDados: Dados, pPuntoBanca: PuntoYBanca) {
+   constructor (pSucursal: number, pCiudad: string, ptragamonedas: Tragamonedas,ptragamonedasPod: TragamonedasPoderoso, pDados: Dados, pPuntoBanca: PuntoYBanca) {
       this.sucursal = pSucursal;
       this.ciudad = pCiudad;
       this.aforo = [];
@@ -54,38 +56,33 @@ export class Casino {
    }
 
    public jugarTragamonedas(jugador: Jugador, apuesta: number): void {
+      fs.readFileSync('./manuales/manualTragamonedas.txt', 'utf8');
       let resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-      if (jugador.getEdad() >= 18) {
-         jugador.setBilletera(resultado + jugador.getBilletera());
-      } else {
-         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
-      }
+      jugador.setBilletera(resultado + jugador.getBilletera());
    }
-
-   public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number): void {
+   
+   public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number,diaDeSuerte:boolean): void {
+      fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf8');
       let resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-      if (jugador.getEdad() >= 18) {
-         jugador.setBilletera(resultado + jugador.getBilletera());
-      } else {
-         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
-      }
+      jugador.setBilletera(resultado + jugador.getBilletera());
+      
    }
 
    public jugarDados(jugador: Jugador, apuesta: number): void {
+      fs.readFileSync('./manuales/manualDados.txt', 'utf8');
       let resultado = this.dados.iniciarDados(apuesta);
-      if (jugador.getEdad() >= 18) {
-         jugador.setBilletera(resultado + jugador.getBilletera());
-      } else {
-         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
-      }
+      jugador.setBilletera(resultado + jugador.getBilletera());
+     
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string): void {
+      fs.readFileSync('./manuales/manualPuntoBanca.txt', 'utf8');
       let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-      if (jugador.getEdad() >= 18) {
-         jugador.setBilletera(resultado + jugador.getBilletera());
-      } else {
-         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
-      }
+      jugador.setBilletera(resultado + jugador.getBilletera());
    }
 }
+
+/* public cuentaCorriente(): void {
+   let creditoCuenta = this.dineroFinal - this.creditoInicial();
+   console.log(`El jugador ${this.nombre} tiene ${creditoCuenta} de credito en cuenta`);
+} */

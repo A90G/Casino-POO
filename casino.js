@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 exports.Casino = void 0;
+var fs = require("fs");
 var Casino = /** @class */ (function () {
     function Casino(pSucursal, pCiudad, ptragamonedas, ptragamonedasPod, pDados, pPuntoBanca) {
         this.sucursal = pSucursal;
@@ -36,41 +37,29 @@ var Casino = /** @class */ (function () {
         return this.aforo;
     };
     Casino.prototype.jugarTragamonedas = function (jugador, apuesta) {
+        fs.readFileSync('./manuales/manualTragamonedas.txt', 'utf8');
         var resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-        if (jugador.getEdad() >= 18) {
-            jugador.setBilletera(resultado + jugador.getBilletera());
-        }
-        else {
-            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
-        }
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
-    Casino.prototype.jugarTragamonedasPoderoso = function (jugador, apuesta) {
+    Casino.prototype.jugarTragamonedasPoderoso = function (jugador, apuesta, diaDeSuerte) {
+        fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf8');
         var resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-        if (jugador.getEdad() >= 18) {
-            jugador.setBilletera(resultado + jugador.getBilletera());
-        }
-        else {
-            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
-        }
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
     Casino.prototype.jugarDados = function (jugador, apuesta) {
+        fs.readFileSync('./manuales/manualDados.txt', 'utf8');
         var resultado = this.dados.iniciarDados(apuesta);
-        if (jugador.getEdad() >= 18) {
-            jugador.setBilletera(resultado + jugador.getBilletera());
-        }
-        else {
-            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
-        }
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
     Casino.prototype.jugarPuntoYBanca = function (jugador, apuesta, apuestaQuien) {
+        fs.readFileSync('./manuales/manualPuntoBanca.txt', 'utf8');
         var resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-        if (jugador.getEdad() >= 18) {
-            jugador.setBilletera(resultado + jugador.getBilletera());
-        }
-        else {
-            console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
-        }
+        jugador.setBilletera(resultado + jugador.getBilletera());
     };
     return Casino;
 }());
 exports.Casino = Casino;
+/* public cuentaCorriente(): void {
+   let creditoCuenta = this.dineroFinal - this.creditoInicial();
+   console.log(`El jugador ${this.nombre} tiene ${creditoCuenta} de credito en cuenta`);
+} */

@@ -17,20 +17,28 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 exports.TragamonedasPoderoso = void 0;
 var tragamonedas_1 = require("./tragamonedas");
+var fs = require("fs");
 var TragamonedasPoderoso = /** @class */ (function (_super) {
     __extends(TragamonedasPoderoso, _super);
     function TragamonedasPoderoso(pTematica, pApuestaMinima, pDiaDeSuerte) {
         var _this = _super.call(this, pTematica, pApuestaMinima) || this;
         _this.diaDeSuerte = pDiaDeSuerte;
+        _this.manual = fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf-8');
         return _this;
     }
     TragamonedasPoderoso.prototype.getDiaDeSuerte = function () {
         return this.diaDeSuerte;
     };
     TragamonedasPoderoso.prototype.setDiaDeSuerte = function (pDiaDeSuerte) {
-        this.diaDeSuerte = pDiaDeSuerte;
+        if (pDiaDeSuerte = true) {
+            return true;
+        }
+        else {
+            return false;
+        }
     };
     TragamonedasPoderoso.prototype.iniciarTragamonedasPoderoso = function (apuesta) {
+        console.log(this.manual);
         var lugar1 = Math.floor(Math.random() * 2) + 1;
         var lugar2 = Math.floor(Math.random() * 2) + 1;
         var lugar3 = Math.floor(Math.random() * 2) + 1;
@@ -48,8 +56,7 @@ var TragamonedasPoderoso = /** @class */ (function (_super) {
             return -apuesta;
         }
         else {
-            console.log("Su apuesta es menor a la apuesta minima ($".concat(this.apuestaMinima, ")"));
-            return 0;
+            throw new Error("Su apuesta es menor a la apuesta minima ($".concat(this.apuestaMinima, ")"));
         }
     };
     return TragamonedasPoderoso;
