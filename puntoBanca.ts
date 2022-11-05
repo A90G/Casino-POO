@@ -1,10 +1,10 @@
 import * as fs from 'fs'
 
 export class PuntoYBanca {
-    private manual:string;
+    private manual: string;
 
 constructor(){
-    this.manual=fs.readFileSync('./manuales/manualPuntoBanca.txt','utf-8');
+    this.manual = fs.readFileSync('./manuales/manualPuntoBanca.txt','utf-8');
 }
 
     public iniciarPuntoyBanca(apuesta: number, apuestaQuien: string): number {
