@@ -8,7 +8,7 @@ export class TragamonedasPoderoso extends Tragamonedas {
   constructor (pTematica: string, pApuestaMinima: number, pDiaDeSuerte: boolean) {
     super (pTematica, pApuestaMinima);
     this.diaDeSuerte = pDiaDeSuerte;
-    this.manual=fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf-8');
+    this.manual = fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf-8');
   }
   
   public getDiaDeSuerte() {
@@ -16,11 +16,11 @@ export class TragamonedasPoderoso extends Tragamonedas {
   }
 
   public setDiaDeSuerte(pDiaDeSuerte: boolean) {
-    if(pDiaDeSuerte=true){
+    if (pDiaDeSuerte = true){
       return true;
-    }else {
+    } else {
     return false;
-   }
+    }
   }
 
   public iniciarTragamonedasPoderoso(apuesta: number): number {
@@ -40,7 +40,7 @@ export class TragamonedasPoderoso extends Tragamonedas {
       console.log(`El resultado es ${combinacion}. El jugador ha perdido su apuesta: $${-apuesta}`);
       return -apuesta;
     } else {
-      throw new Error(`Su apuesta es menor a la apuesta minima ($${this.apuestaMinima})`);
+      throw new Error(`Su apuesta es menor a la apuesta minima (${this.apuestaMinima})`);
     }
   }
 }
