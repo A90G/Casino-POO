@@ -82,7 +82,4 @@ export class Casino {
    }
 }
 
-/* public cuentaCorriente(): void {
-   let creditoCuenta = this.dineroFinal - this.creditoInicial();
-   console.log(`El jugador ${this.nombre} tiene ${creditoCuenta} de credito en cuenta`);
-} */
+
