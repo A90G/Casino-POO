@@ -5,7 +5,7 @@ export class Dados {
 private manual:string;
 
 constructor(){
-    this.manual=fs.readFileSync('./manuales/manualDados.txt','utf-8');
+    this.manual = fs.readFileSync('./manuales/manualDados.txt','utf-8');
 }
     public iniciarDados(apuesta: number): number {
         console.log(this.manual);
