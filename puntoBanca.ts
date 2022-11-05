@@ -42,5 +42,5 @@ constructor(){
             console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha perdido su apuesta: $${-apuesta}`);
             return -apuesta;
         }
-    }
+      }   
 }

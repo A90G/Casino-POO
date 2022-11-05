@@ -40,26 +40,30 @@ var Casino = /** @class */ (function () {
         fs.readFileSync('./manuales/manualTragamonedas.txt', 'utf8');
         var resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
         jugador.setBilletera(resultado + jugador.getBilletera());
+        fs.writeFileSync('datosEstadisticosTragamonedas.txt', "\n" + "  Datos recolectados" + "\n" + "Tragamonedas" + "\n" + "Resultado juego: " + resultado + "\n");
+        console.log(fs.readFileSync('datosEstadisticosTragamonedas.txt', 'utf-8'));
     };
     Casino.prototype.jugarTragamonedasPoderoso = function (jugador, apuesta, diaDeSuerte) {
         fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf8');
         var resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
         jugador.setBilletera(resultado + jugador.getBilletera());
+        fs.writeFileSync('datosEstadisticosTragamonedasPoderoso.txt', "\n" + "  Datos recolectados" + "\n" + "Tragamonedas Poderoso" + "\n" + "Resultado juego: " + resultado + "\n");
+        console.log(fs.readFileSync('datosEstadisticosTragamonedasPoderoso.txt', 'utf-8'));
     };
     Casino.prototype.jugarDados = function (jugador, apuesta) {
         fs.readFileSync('./manuales/manualDados.txt', 'utf8');
         var resultado = this.dados.iniciarDados(apuesta);
         jugador.setBilletera(resultado + jugador.getBilletera());
+        fs.writeFileSync('datosEstadisticosDados.txt', "\n" + "  Datos recolectados" + "\n" + "Dados" + "\n" + "Resultado juego: " + resultado + "\n");
+        console.log(fs.readFileSync('datosEstadisticosDados.txt', 'utf-8'));
     };
     Casino.prototype.jugarPuntoYBanca = function (jugador, apuesta, apuestaQuien) {
         fs.readFileSync('./manuales/manualPuntoBanca.txt', 'utf8');
         var resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
         jugador.setBilletera(resultado + jugador.getBilletera());
+        fs.writeFileSync('datosEstadisticosPuntoYBanca.txt', "\n" + "  Datos recolectados" + "\n" + "Punto y Banca " + "\n" + "Resultado juego: " + resultado + "\n");
+        console.log(fs.readFileSync('datosEstadisticosPuntoYBanca.txt', 'utf-8'));
     };
     return Casino;
 }());
 exports.Casino = Casino;
-/* public cuentaCorriente(): void {
-   let creditoCuenta = this.dineroFinal - this.creditoInicial();
-   console.log(`El jugador ${this.nombre} tiene ${creditoCuenta} de credito en cuenta`);
-} */

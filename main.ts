@@ -62,21 +62,5 @@ casino1.jugarDados(jugador001, 1000);
 
 console.log(jugador001.getBilletera());
 casino1.jugarTragamonedas(jugador001,500);
-casino1.jugarTragamonedas(jugador002,1000);
 casino1.jugarPuntoYBanca(jugador001,1000,'punto');
 casino1.jugarTragamonedasPoderoso(jugador004,1000,true);
-
-
-// let juegosCasino: string [] = ['Dados','Punto y Banca', 'Tragamonedas', ' Tragamonedas Poderoso'];
-// let opt:number;
-// opt = readlineSync.keyInSelect(juegosCasino, "Bienvenido al Casino Royale, por favor elija su juego");
-// if (juegosCasino[opt] === "Dados") {           
-//    casino1.jugarDados(jugador001,500);
-//    casino1.generarDatos(dados1);
-//  } else if (juegosCasino[opt] === "Punto y Banca") {
-//    casino1.jugarPuntoYBanca(jugador001,300,'Banca')  
-//  } else if (juegosCasino[opt] === "Tragamonedas") {
-//    casino1.jugarTragamonedas(jugador001,10000);    
-//  } else if (juegosCasino[opt] === "Tragamonedas poderoso") {
-//    casino1.jugarTragamonedasPoderoso(jugador001,11000);    
-//  }

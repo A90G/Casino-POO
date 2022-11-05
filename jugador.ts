@@ -67,5 +67,4 @@ export class Jugador extends Persona {
     }
     console.log(`El jugador tiene el siguiente apalancamiento aprobado: ${this.apalancamiento}`);
   }
-  
-  }
+}
