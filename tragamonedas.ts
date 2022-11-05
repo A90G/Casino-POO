@@ -8,7 +8,7 @@ export class Tragamonedas {
   constructor (pTematica: string, pApuestaMinima: number){
     this.tematica = pTematica;
     this.apuestaMinima = pApuestaMinima;
-    this.manual=fs.readFileSync('./manuales/manualTragamonedas.txt','utf-8');
+    this.manual = fs.readFileSync('./manuales/manualTragamonedas.txt','utf-8');
   }
 
   public getTematica(): string {

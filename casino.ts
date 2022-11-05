@@ -87,6 +87,5 @@ export class Casino {
       jugador.setBilletera(resultado + jugador.getBilletera());
       fs.writeFileSync('datosEstadisticosPuntoYBanca.txt', "\n" + "  Datos recolectados" + "\n" + "Punto y Banca " + "\n" + "Resultado juego: " + resultado + "\n");
          console.log(fs.readFileSync('datosEstadisticosPuntoYBanca.txt','utf-8'));
-     }
    }
-
+}

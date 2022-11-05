@@ -8,7 +8,7 @@ export class TragamonedasPoderoso extends Tragamonedas {
   constructor (pTematica: string, pApuestaMinima: number, pDiaDeSuerte: boolean) {
     super (pTematica, pApuestaMinima);
     this.diaDeSuerte = pDiaDeSuerte;
-    this.manual=fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf-8');
+    this.manual = fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf-8');
   }
   
   public getDiaDeSuerte() {
@@ -16,11 +16,11 @@ export class TragamonedasPoderoso extends Tragamonedas {
   }
 
   public setDiaDeSuerte(pDiaDeSuerte: boolean) {
-    if(pDiaDeSuerte=true){
+    if (pDiaDeSuerte = true){
       return true;
-    }else {
+    } else {
     return false;
-   }
+    }
   }
 
   public iniciarTragamonedasPoderoso(apuesta: number): number {
