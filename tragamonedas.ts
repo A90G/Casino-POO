@@ -3,7 +3,7 @@ import * as fs from 'fs'
 export class Tragamonedas {
   protected tematica: string;
   protected apuestaMinima: number;
-  protected manual:string;
+  protected manual: string;
 
   constructor (pTematica: string, pApuestaMinima: number){
     this.tematica = pTematica;
@@ -43,5 +43,5 @@ export class Tragamonedas {
     } else {
       throw new Error(`Su apuesta es menor a la apuesta minima ($${this.apuestaMinima})`);
     }
- }
+  }
 }

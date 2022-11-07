@@ -58,34 +58,48 @@ export class Casino {
    public jugarTragamonedas(jugador: Jugador, apuesta: number): void {
       fs.readFileSync('./manuales/manualTragamonedas.txt', 'utf8');
       let resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
-      jugador.setBilletera(resultado + jugador.getBilletera());
-      fs.writeFileSync('datosEstadisticosTragamonedas.txt', "\n" + "  Datos recolectados" + "\n" +"Tragamonedas" + "\n" + "Resultado juego: " + resultado + "\n");
-         console.log(fs.readFileSync('datosEstadisticosTragamonedas.txt','utf-8'));
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+         fs.writeFileSync('./estadisticas/datosEstadisticosTragamonedas.txt', "\n" + "Datos recolectados" + "\n" +"Tragamonedas" + "\n" + "Resultado juego: " + resultado + "\n");
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
+      console.log(fs.readFileSync('./estadisticas/datosEstadisticosTragamonedas.txt','utf-8'));
    }
    
-   public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number,diaDeSuerte:boolean): void {
+   public jugarTragamonedasPoderoso(jugador: Jugador, apuesta: number): void {
       fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf8');
       let resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
-      jugador.setBilletera(resultado + jugador.getBilletera());
-      fs.writeFileSync('datosEstadisticosTragamonedasPoderoso.txt', "\n" + "  Datos recolectados" + "\n" +"Tragamonedas Poderoso" + "\n" + "Resultado juego: " + resultado + "\n");
-         console.log(fs.readFileSync('datosEstadisticosTragamonedasPoderoso.txt','utf-8'));
-      
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+         fs.writeFileSync('./estadisticas/datosEstadisticosTragamonedasPoderoso.txt', "\n" + "Datos recolectados" + "\n" +"Tragamonedas Poderoso" + "\n" + "Resultado juego: " + resultado + "\n");
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
+      console.log(fs.readFileSync('./estadisticas/datosEstadisticosTragamonedasPoderoso.txt','utf-8'));      
    }
 
    public jugarDados(jugador: Jugador, apuesta: number): void {
       fs.readFileSync('./manuales/manualDados.txt', 'utf8');
       let resultado = this.dados.iniciarDados(apuesta);
-      jugador.setBilletera(resultado + jugador.getBilletera());
-      fs.writeFileSync('datosEstadisticosDados.txt', "\n" + "  Datos recolectados" + "\n" + "Dados" + "\n" + "Resultado juego: " + resultado + "\n");
-         console.log(fs.readFileSync('datosEstadisticosDados.txt','utf-8'));
-     
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+         fs.writeFileSync('./estadisticas/datosEstadisticosDados.txt', "\n" + "Datos recolectados" + "\n" + "Dados" + "\n" + "Resultado juego: " + resultado + "\n");
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
+      console.log(fs.readFileSync('./estadisticas/datosEstadisticosDados.txt','utf-8'));
    }
 
    public jugarPuntoYBanca(jugador: Jugador, apuesta: number, apuestaQuien: string): void {
       fs.readFileSync('./manuales/manualPuntoBanca.txt', 'utf8');
       let resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
-      jugador.setBilletera(resultado + jugador.getBilletera());
-      fs.writeFileSync('datosEstadisticosPuntoYBanca.txt', "\n" + "  Datos recolectados" + "\n" + "Punto y Banca " + "\n" + "Resultado juego: " + resultado + "\n");
-         console.log(fs.readFileSync('datosEstadisticosPuntoYBanca.txt','utf-8'));
+      if (jugador.getEdad() >= 18) {
+         jugador.setBilletera(resultado + jugador.getBilletera());
+         fs.writeFileSync('./estadisticas/datosEstadisticosPuntoYBanca.txt', "\n" + "Datos recolectados" + "\n" + "Punto y Banca " + "\n" + "Resultado juego: " + resultado + "\n");
+      } else {
+         console.log(`El jugador ${jugador.getNombre()} ${jugador.getApellido()} es menor de edad, por lo que no puede jugar en el casino`);
+      }
+      console.log(fs.readFileSync('./estadisticas/datosEstadisticosPuntoYBanca.txt','utf-8'));
    }
 }

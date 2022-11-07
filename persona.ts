@@ -37,7 +37,7 @@ export class Persona {
     if (this.edad >= 18) {
       return true;
     } else {
-     return false;
+      return false;
     }
   }
 }

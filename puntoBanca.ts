@@ -1,11 +1,29 @@
 import * as fs from 'fs'
 
 export class PuntoYBanca {
-    private manual: string;
+    protected apuestaMinima: number;
+    protected cartaPunto1: number;
+    protected cartaPunto2: number;
+    protected cartaBanca1: number;
+    protected cartaBanca2: number;
+    protected manual: string;
 
-constructor(){
-    this.manual = fs.readFileSync('./manuales/manualPuntoBanca.txt','utf-8');
-}
+    constructor(pApuestaMinima: number) {
+        this.apuestaMinima = pApuestaMinima;
+        this.cartaPunto1 = 1
+        this.cartaPunto2 = 1
+        this.cartaBanca1 = 1
+        this.cartaBanca2 = 1
+        this.manual = fs.readFileSync('./manuales/manualPuntoBanca.txt','utf-8');
+    }
+    
+    public getApuestaMinima(): number {
+        return this.apuestaMinima;
+    }
+
+    public setApuestaMinima(apuestaMinima: number): void {
+        this.apuestaMinima = apuestaMinima;
+    }
 
     public iniciarPuntoyBanca(apuesta: number, apuestaQuien: string): number {
         console.log(this.manual);
@@ -26,21 +44,22 @@ constructor(){
             resultadoBanca -= 10;
         }
 
-        if (resultadoPunto == 8 || resultadoPunto == 9) {
+        if ((resultadoPunto == 8 || resultadoPunto == 9) && (apuesta >= this.apuestaMinima)) {
             console.log(`El resultado es ${resultadoPunto}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
             return apuesta * 2;
-        } else if (apuestaQuien.toLowerCase() == "punto" && resultadoPunto > resultadoBanca) {
+        } else if (apuestaQuien.toLowerCase() == "punto" && resultadoPunto > resultadoBanca && apuesta >= this.apuestaMinima) {
             console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
             return apuesta * 2;
-        } else if (apuestaQuien.toLowerCase() == "banca" && resultadoBanca > resultadoPunto) {
+        } else if (apuestaQuien.toLowerCase() == "banca" && resultadoBanca > resultadoPunto && apuesta >= this.apuestaMinima) {
             console.log(`El resultado de la Banca es ${resultadoBanca} y el resultado del Punto es ${resultadoPunto}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
-            return apuesta * 2; 
-        } else if (apuestaQuien.toLowerCase() == "empate" && resultadoPunto == resultadoBanca) {
+        } else if (apuestaQuien.toLowerCase() == "empate" && resultadoPunto == resultadoBanca && apuesta >= this.apuestaMinima) {
             console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha ganado su apuesta: $${apuesta * 8}`);
             return apuesta * 8;
-        } else {
+        } else if (apuesta >= this.apuestaMinima) {
             console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha perdido su apuesta: $${-apuesta}`);
             return -apuesta;
+        } else {
+            throw new Error(`Su apuesta es menor a la apuesta minima ($${this.apuestaMinima})`);
         }
     }
 }
