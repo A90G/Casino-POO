@@ -1,3 +1,4 @@
+
 "Tragamonedas"
 
 Este juego contiene tres ruedas con números al azar, el objetivo es que se repita el mismo número en las tres ruedas.

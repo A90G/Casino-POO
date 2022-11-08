@@ -38,11 +38,11 @@ casino1.jugarDados(jugador001, 500000);
 casino1.jugarPuntoYBanca(jugador001, 2000, "empate");
 casino1.jugarTragamonedas(jugador001, 3000);
 casino1.jugarTragamonedasPoderoso(jugador001, 3000);
-casino1.jugarDados(jugador001, 4500);
+/* casino1.jugarDados(jugador001, 4500);
 casino1.jugarPuntoYBanca(jugador001, 21000, "punto");
 casino1.jugarTragamonedas(jugador001, 2000);
 casino1.jugarTragamonedasPoderoso(jugador001, 1000);
-/*casino1.jugarDados(jugador001, 1000);
+casino1.jugarDados(jugador001, 1000);
 casino1.jugarPuntoYBanca(jugador001, 1000, "banca");
 casino1.jugarTragamonedas(jugador001, 460);
 casino1.jugarTragamonedasPoderoso(jugador001, 2000);
@@ -57,15 +57,16 @@ casino1.jugarTragamonedasPoderoso(jugador001, 1230);
 casino1.jugarDados(jugador001, 12000);
 casino1.jugarPuntoYBanca(jugador001, 32200, "banca");
 casino1.jugarTragamonedas(jugador001, 1022);
-casino1.jugarTragamonedasPoderoso(jugador001, 13330);*/
+casino1.jugarTragamonedasPoderoso(jugador001, 13330); */
 // pruebas de escritorio para persona y jugador
-jugador010.setNombre('Agustina');
+/* jugador010.setNombre('Agustina');
 console.log(jugador010.getNombre());
 jugador010.setApellido('Smith');
 console.log(jugador010.getApellido());
 jugador010.setEdad(32);
 console.log(jugador010.getEdad());
 console.log(jugador010.esMayorEdad());
+
 console.log(jugador001.getDineroInicial());
 //jugador001.setBilletera(2500000);
 console.log(jugador001.getBilletera());
@@ -73,4 +74,5 @@ jugador001.gananciaDelDia();
 jugador001.porcentajeOperGanadoras();
 jugador001.cambioCategoria();
 console.log(jugador001.getCategoria());
-console.log(jugador001.getBilletera());
+
+console.log(jugador001.getBilletera()); */ 

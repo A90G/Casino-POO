@@ -41,7 +41,7 @@ var Casino = /** @class */ (function () {
         var resultado = this.tragamonedas.iniciarTragamonedas(apuesta);
         if (jugador.getEdad() >= 18) {
             jugador.setBilletera(resultado + jugador.getBilletera());
-            fs.writeFileSync('./estadisticas/datosEstadisticosTragamonedas.txt', "\n" + "Datos recolectados" + "\n" + "Tragamonedas" + "\n" + "Resultado juego: " + resultado + "\n");
+            fs.writeFileSync('./estadisticas/datosEstadisticosTragamonedas.txt', "\n" + "Datos recolectados" + "\n" + "Tragamonedas" + "\n" + "Resultado juego: $" + resultado);
         }
         else {
             console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
@@ -53,7 +53,7 @@ var Casino = /** @class */ (function () {
         var resultado = this.tragamonedasPoderoso.iniciarTragamonedasPoderoso(apuesta);
         if (jugador.getEdad() >= 18) {
             jugador.setBilletera(resultado + jugador.getBilletera());
-            fs.writeFileSync('./estadisticas/datosEstadisticosTragamonedasPoderoso.txt', "\n" + "Datos recolectados" + "\n" + "Tragamonedas Poderoso" + "\n" + "Resultado juego: " + resultado + "\n");
+            fs.writeFileSync('./estadisticas/datosEstadisticosTragamonedasPoderoso.txt', "\n" + "Datos recolectados" + "\n" + "Tragamonedas Poderoso" + "\n" + "Resultado juego: $" + resultado);
         }
         else {
             console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
@@ -65,7 +65,7 @@ var Casino = /** @class */ (function () {
         var resultado = this.dados.iniciarDados(apuesta);
         if (jugador.getEdad() >= 18) {
             jugador.setBilletera(resultado + jugador.getBilletera());
-            fs.writeFileSync('./estadisticas/datosEstadisticosDados.txt', "\n" + "Datos recolectados" + "\n" + "Dados" + "\n" + "Resultado juego: " + resultado + "\n");
+            fs.writeFileSync('./estadisticas/datosEstadisticosDados.txt', "\n" + "Datos recolectados" + "\n" + "Dados" + "\n" + "Resultado juego: $" + resultado);
         }
         else {
             console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));
@@ -77,7 +77,7 @@ var Casino = /** @class */ (function () {
         var resultado = this.puntoBanca.iniciarPuntoyBanca(apuesta, apuestaQuien);
         if (jugador.getEdad() >= 18) {
             jugador.setBilletera(resultado + jugador.getBilletera());
-            fs.writeFileSync('./estadisticas/datosEstadisticosPuntoYBanca.txt', "\n" + "Datos recolectados" + "\n" + "Punto y Banca " + "\n" + "Resultado juego: " + resultado + "\n");
+            fs.writeFileSync('./estadisticas/datosEstadisticosPuntoYBanca.txt', "\n" + "Datos recolectados" + "\n" + "Punto y Banca " + "\n" + "Resultado juego: $" + resultado);
         }
         else {
             console.log("El jugador ".concat(jugador.getNombre(), " ").concat(jugador.getApellido(), " es menor de edad, por lo que no puede jugar en el casino"));

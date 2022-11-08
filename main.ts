@@ -35,12 +35,12 @@ let casino1: Casino = new Casino (23, "Buenos Aires", tragamonedas1,tragamonedas
 
 // pruebas de escritorio para casino
 
-casino1.setSucursal(99);
+/* casino1.setSucursal(99);
 console.log(casino1.getSucursal());
 casino1.setCiudad('Ushuaia');
 console.log(casino1.getCiudad());
 casino1.validacionAforo(arrayJugadores);
-console.log(casino1.getAforo());
+console.log(casino1.getAforo()); */
 
 // prubas de escritorio de los juegos
 
@@ -48,7 +48,7 @@ casino1.jugarDados(jugador001, 500000);
 casino1.jugarPuntoYBanca(jugador001, 2000, "empate");
 casino1.jugarTragamonedas(jugador001, 3000);
 casino1.jugarTragamonedasPoderoso(jugador001, 3000);
-casino1.jugarDados(jugador001, 4500);
+/* casino1.jugarDados(jugador001, 4500);
 casino1.jugarPuntoYBanca(jugador001, 21000, "punto");
 casino1.jugarTragamonedas(jugador001, 2000);
 casino1.jugarTragamonedasPoderoso(jugador001, 1000);
@@ -67,11 +67,11 @@ casino1.jugarTragamonedasPoderoso(jugador001, 1230);
 casino1.jugarDados(jugador001, 12000);
 casino1.jugarPuntoYBanca(jugador001, 32200, "banca");
 casino1.jugarTragamonedas(jugador001, 1022);
-casino1.jugarTragamonedasPoderoso(jugador001, 13330);
+casino1.jugarTragamonedasPoderoso(jugador001, 13330); */
 
 // pruebas de escritorio para persona y jugador
 
-jugador010.setNombre('Agustina');
+/* jugador010.setNombre('Agustina');
 console.log(jugador010.getNombre());
 jugador010.setApellido('Smith');
 console.log(jugador010.getApellido());
@@ -87,4 +87,4 @@ jugador001.porcentajeOperGanadoras();
 jugador001.cambioCategoria();
 console.log(jugador001.getCategoria());
 
-console.log(jugador001.getBilletera());
+console.log(jugador001.getBilletera()); */

@@ -1,4 +1,4 @@
 
 Datos recolectados
 Dados
-Resultado juego: 9000
+Resultado juego: $-500000

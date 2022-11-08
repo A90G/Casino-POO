@@ -1,3 +1,4 @@
+
 "Tragamonedas Poderoso"
 
 Este juego contiene las mismas reglas que el Tragamonedas, sumado a un bonus aleatorio llamado "Día de Suerte", que quintuplica el valor de la apuesta.
