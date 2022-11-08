@@ -41,7 +41,8 @@ export class Tragamonedas {
       console.log(`La combinación es ${combinacion}. El jugador ha perdido su apuesta: $${-apuesta}`);
       return -apuesta;
     } else {
-      throw new Error(`Su apuesta es menor a la apuesta minima ($${this.apuestaMinima})`);
+      console.log(`Su apuesta es menor a la apuesta minima ($${this.apuestaMinima})`);
+      return 0;
     }
   }
 }

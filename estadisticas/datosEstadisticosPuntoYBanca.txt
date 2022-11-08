@@ -1,3 +1,4 @@
+
 Datos recolectados
 Punto y Banca 
-Resultado juego: 2000
+Resultado juego: undefined
