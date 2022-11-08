@@ -1,9 +1,8 @@
 "Tragamonedas Poderoso"
 
-Este juego contiene las mismas reglas que el Tragamonedas, sumado a un bonus aleatorio llamado Dia de Suerte,
-que quintuplica el valor de la apuesta.
-Para participar cuenta con una apuesta minima de $100.
-Las chances de ganar son:
- - Si tanto la primer, segunda y tercera rueda son iguales y la apuesta es mayor a la apuesta minima, el jugador
-habrá quintuplicado la apuesta en caso de haber obtenido el bonus, sino solo doblará la apuesta.
- - Si las combinaciónes de las ruedas fuesen distintas el jugador habrá perdido la apuesta.
+Este juego contiene las mismas reglas que el Tragamonedas, sumado a un bonus aleatorio llamado "Día de Suerte", que quintuplica el valor de la apuesta.
+El juego cuenta con una apuesta minima.
+Si la combinación resultante fuese:
+    - Si la primera, segunda y tercera rueda son iguales y la apuesta es mayor a la apuesta minima, el jugador habrá duplicado la apuesta.
+    - Si la primera, segunda y tercera rueda son iguales, la apuesta es mayor a la apuesta minima, y es el "Día de Suerte", el jugador habrá quintuplicado la apuesta.
+    - Si las combinaciones de las ruedas fuesen distintas, el jugador habrá perdido la apuesta.

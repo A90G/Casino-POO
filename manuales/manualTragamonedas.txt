@@ -1,8 +1,7 @@
 "Tragamonedas"
 
 Este juego contiene tres ruedas con números al azar, el objetivo es que se repita el mismo número en las tres ruedas.
-Tiene una apuesta minima para participar de $100.
-Las chances de ganar son:
- - Si tanto la primer,segunda y tercera rueda son iguales y la apuesta es mayor a la apuesta minima, el jugador
-habrá duplicado la apuesta.
- - Si las combinaciónes de las ruedas fuesen distintas el jugador habrá perdido la apuesta.
+El juego cuenta con una apuesta minima.
+Si la combinación resultante fuese: 
+    - Si la primera, segunda y tercera rueda son iguales y la apuesta es mayor a la apuesta minima, el jugador habrá duplicado la apuesta.
+    - Si las combinaciones de las ruedas fuesen distintas, el jugador habrá perdido la apuesta.
