@@ -52,6 +52,7 @@ export class PuntoYBanca {
             return apuesta * 2;
         } else if (apuestaQuien.toLowerCase() == "banca" && resultadoBanca > resultadoPunto && apuesta >= this.apuestaMinima) {
             console.log(`El resultado de la Banca es ${resultadoBanca} y el resultado del Punto es ${resultadoPunto}. El jugador ha ganado su apuesta: $${apuesta * 2}`);
+            return apuesta * 2;
         } else if (apuestaQuien.toLowerCase() == "empate" && resultadoPunto == resultadoBanca && apuesta >= this.apuestaMinima) {
             console.log(`El resultado del Punto es ${resultadoPunto} y el resultado de la Banca es ${resultadoBanca}. El jugador ha ganado su apuesta: $${apuesta * 8}`);
             return apuesta * 8;

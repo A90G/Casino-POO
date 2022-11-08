@@ -43,6 +43,7 @@ var PuntoYBanca = /** @class */ (function () {
         }
         else if (apuestaQuien.toLowerCase() == "banca" && resultadoBanca > resultadoPunto && apuesta >= this.apuestaMinima) {
             console.log("El resultado de la Banca es ".concat(resultadoBanca, " y el resultado del Punto es ").concat(resultadoPunto, ". El jugador ha ganado su apuesta: $").concat(apuesta * 2));
+            return apuesta * 2;
         }
         else if (apuestaQuien.toLowerCase() == "empate" && resultadoPunto == resultadoBanca && apuesta >= this.apuestaMinima) {
             console.log("El resultado del Punto es ".concat(resultadoPunto, " y el resultado de la Banca es ").concat(resultadoBanca, ". El jugador ha ganado su apuesta: $").concat(apuesta * 8));
