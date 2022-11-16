@@ -7,16 +7,16 @@ import { TragamonedasPoderoso } from "./tragamonedasPoderoso";
 
 // creamos los jugadores
 
-let jugador001: Jugador = new Jugador("Pedro","Alvarez", 34, 1500000);
-let jugador002: Jugador = new Jugador("Pablo","Gómes", 28, 250000);
-let jugador003: Jugador = new Jugador("Ariel","Durán", 18, 15000);
-let jugador004: Jugador = new Jugador("Romina","Perez", 16, 2500);
-let jugador005: Jugador = new Jugador("Juana","Dinardo", 30, 55000);
-let jugador006: Jugador = new Jugador("María","Fernandez", 54, 75000);
-let jugador007: Jugador = new Jugador("James","Bond", 40, 25000);
-let jugador008: Jugador = new Jugador("Luis","Mendez", 65, 115000);
-let jugador009: Jugador = new Jugador("Lu","Chi", 12, 555);
-let jugador010: Jugador = new Jugador("Luciana","Velez", 60, 50000);
+let jugador001: Jugador = new Jugador("Pedro", "Alvarez", 34, 1500000);
+let jugador002: Jugador = new Jugador("Pablo", "Gómes", 28, 250000);
+let jugador003: Jugador = new Jugador("Ariel", "Durán", 18, 15000);
+let jugador004: Jugador = new Jugador("Romina", "Perez", 16, 2500);
+let jugador005: Jugador = new Jugador("Juana", "Dinardo", 30, 55000);
+let jugador006: Jugador = new Jugador("María", "Fernandez", 54, 75000);
+let jugador007: Jugador = new Jugador("James", "Bond", 40, 25000);
+let jugador008: Jugador = new Jugador("Luis", "Mendez", 65, 115000);
+let jugador009: Jugador = new Jugador("Lu", "Chi", 12, 555);
+let jugador010: Jugador = new Jugador("Luciana", "Velez", 60, 50000);
 
 // arreglo de jugadores
 
@@ -31,7 +31,7 @@ let tragamonedasPoderoso1: TragamonedasPoderoso = new TragamonedasPoderoso("anim
 
 // creamos el casino
 
-let casino1: Casino = new Casino (23, "Buenos Aires", tragamonedas1,tragamonedasPoderoso1, dados1, puntoYBanca1);
+let casino1: Casino = new Casino(23, "Buenos Aires", tragamonedas1, tragamonedasPoderoso1, dados1, puntoYBanca1);
 
 // pruebas de escritorio para casino
 

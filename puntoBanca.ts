@@ -14,9 +14,9 @@ export class PuntoYBanca {
         this.cartaPunto2 = 1
         this.cartaBanca1 = 1
         this.cartaBanca2 = 1
-        this.manual = fs.readFileSync('./manuales/manualPuntoBanca.txt','utf-8');
+        this.manual = fs.readFileSync('./manuales/manualPuntoBanca.txt', 'utf-8');
     }
-    
+
     public getApuestaMinima(): number {
         return this.apuestaMinima;
     }
@@ -40,7 +40,7 @@ export class PuntoYBanca {
             resultadoPunto -= 10;
         }
 
-        if(resultadoBanca > 10) {
+        if (resultadoBanca > 10) {
             resultadoBanca -= 10;
         }
 
