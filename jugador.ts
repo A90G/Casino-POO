@@ -5,8 +5,8 @@ export class Jugador extends Persona {
   protected billetera: number;
   protected categoria: string;
 
-  constructor (pNombre: string, pApellido: string, pEdad: number, pDineroInicial: number) {
-    super (pNombre, pApellido, pEdad);
+  constructor(pNombre: string, pApellido: string, pEdad: number, pDineroInicial: number) {
+    super(pNombre, pApellido, pEdad);
     this.dineroInicial = pDineroInicial;
     this.billetera = pDineroInicial;
     this.categoria = "Jugador Comun";
@@ -27,19 +27,19 @@ export class Jugador extends Persona {
   public setBilletera(dinero: number) {
     this.billetera = dinero;
   }
-  
+
   public gananciaDelDia(): number {
     let ganancia: number = (this.getBilletera() - this.dineroInicial);
     console.log(`El resultado del dia del jugador es: $${ganancia}`);
     return ganancia;
   }
-  
+
   public porcentajeOperGanadoras(): number {
     let porcentaje = (this.gananciaDelDia() * 100) / this.dineroInicial;
     console.log(`El jugador tiene un porcentaje de operaciones ganadores de ${porcentaje}%`);
     return porcentaje;
   }
-  
+
   public cambioCategoria(): void {
     if (this.dineroInicial >= 1000000 && this.porcentajeOperGanadoras() >= 45) {
       this.categoria = "Jugador VIP";

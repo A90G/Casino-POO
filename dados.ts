@@ -1,16 +1,16 @@
-import * as fs from 'fs'
+import * as fs from 'fs';
 
 export class Dados {
     protected apuestaMinima: number;
     protected dado1: number;
     protected dado2: number;
-    protected manual:string;
+    protected manual: string;
 
     constructor(pApuestaMinima: number) {
         this.apuestaMinima = pApuestaMinima;
         this.dado1 = 1;
         this.dado2 = 2;
-        this.manual = fs.readFileSync('./manuales/manualDados.txt','utf-8');
+        this.manual = fs.readFileSync('./manuales/manualDados.txt', 'utf-8');
     }
 
     public getApuestaMinima(): number {
@@ -20,7 +20,7 @@ export class Dados {
     public setApuestaMinima(apuestaMinima: number): void {
         this.apuestaMinima = apuestaMinima;
     }
-    
+
     public iniciarDados(apuesta: number): number {
         console.log(this.manual);
         let resultado: number = 0;

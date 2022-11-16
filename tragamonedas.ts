@@ -5,17 +5,17 @@ export class Tragamonedas {
   protected apuestaMinima: number;
   protected manual: string;
 
-  constructor (pTematica: string, pApuestaMinima: number){
+  constructor(pTematica: string, pApuestaMinima: number) {
     this.tematica = pTematica;
     this.apuestaMinima = pApuestaMinima;
-    this.manual = fs.readFileSync('./manuales/manualTragamonedas.txt','utf-8');
+    this.manual = fs.readFileSync('./manuales/manualTragamonedas.txt', 'utf-8');
   }
 
   public getTematica(): string {
     return this.tematica;
   }
 
-  public setTematica (pTematica: string): void {
+  public setTematica(pTematica: string): void {
     this.tematica = pTematica;
   }
 
@@ -23,7 +23,7 @@ export class Tragamonedas {
     return this.apuestaMinima;
   }
 
-  public setApuesta (pApuestaMinima: number) {
+  public setApuesta(pApuestaMinima: number) {
     this.apuestaMinima = pApuestaMinima;
   }
 

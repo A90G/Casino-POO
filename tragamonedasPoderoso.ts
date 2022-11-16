@@ -5,21 +5,21 @@ export class TragamonedasPoderoso extends Tragamonedas {
   protected diaDeSuerte: boolean;
   protected manual: string;
 
-  constructor (pTematica: string, pApuestaMinima: number, pDiaDeSuerte: boolean) {
-    super (pTematica, pApuestaMinima);
+  constructor(pTematica: string, pApuestaMinima: number, pDiaDeSuerte: boolean) {
+    super(pTematica, pApuestaMinima);
     this.diaDeSuerte = pDiaDeSuerte;
     this.manual = fs.readFileSync('./manuales/manualTragamonedasPoderoso.txt', 'utf-8');
   }
-  
+
   public getDiaDeSuerte() {
     return this.diaDeSuerte;
   }
 
   public setDiaDeSuerte(pDiaDeSuerte: boolean) {
-    if (pDiaDeSuerte = true){
+    if (pDiaDeSuerte = true) {
       return true;
     } else {
-    return false;
+      return false;
     }
   }
 
